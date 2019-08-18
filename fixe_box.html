@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  html,body,div{
+    padding: 0;
+    margin: 0;
+  }
+  .wrap{
+    margin: 20px auto;
+    border: 1px solid #123;
+    width: 70%;
+    height: auto;
+    font-size: 20px;
+    font-family: 'Arial'
+  }
+  .head{
+    line-height: 30px;
+    background-color:khaki;
+    opacity: .8;
+    color: indigo;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 10px;
+  }
+  .body{
+    display: flex;
+    padding: 15px;
+  }
+  .row{
+    flex-direction: row;
+  }
+  .flex-wrap{
+    flex-wrap: wrap; /*nowrap wrap-reverse 是否换行*/        
+  }
+  .column{
+    flex-direction: column-reverse;
+  }
+  .justify-content{
+    justify-content:space-between;
+    /*flex-start 左对齐，flex-end 右对齐, center, space-between 两端对齐；项目之间等距, space-around 两端不对齐均分*/
+  }
+  .body .child{
+    border: 1px solid blue;
+    color: blue;
+    background-color: rgba(mediumaquamarine);
+    margin: 10px;
+    padding: 10px 0px; 
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    line-height: 100px;
+  }
+
+</style>
+<body>
+  <div class="wrap">
+    <div class="head" style="text-align: center">flex box dispositon; flex-direction: row</div>
+    <div class="body row flex-wrap">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+      <div class="child">7</div>
+      <div class="child">8</div>
+      <div class="child">9</div>
+      <div class="child">10</div>
+    </div>
+  </div>
+  <div class="wrap">
+      <div class="head" style="text-align: center">flex box dispositon; flex-direction: row; eclate pareil </div>
+      <div class="body row flex-wrap justify-content">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+      </div>
+    </div>
+  <div class="wrap">
+      <div class="head" style="text-align: center">flex box dispositon; flex-direction: column-reverse</div>
+      <div class="body column ">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+      </div>
+    </div>
+  
+</body>
+</html>
