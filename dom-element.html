@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  html,body,div{
+    padding: 0px;
+    margin: 0px;
+  }
+  .color-red{
+    background-color: brown;
+  }
+  div.warp{
+    margin: 20px auto; /*aligne*/
+    width: 70%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    border: 1px solid black;
+  }
+  #text{
+    padding: 5px;
+    position: relative;
+    margin: auto 10%;
+    top: 8px;
+    left: 10px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+  }
+</style>
+<script>
+  window.onload = function(){
+    const oUl = document.getElementById('uid');
+    const oBn = document.getElementById('but1');
+    const oText = document.getElementById('text1');
+    oBn.onclick = function(){ //caution,onclick
+      let oLi = document.createElement('li');//create an element
+      let lis = oUl.getElementsByTagName('li');
+      oLi.innerHTML = oText.value;
+      oUl.insertBefore(oLi,lis[0])
+      //oUl.appendChild(oLi)//insert an element in the correspending parent
+    }
+
+    // oul.setAttribute('class','color-red'); //set an attribute
+  }
+</script>
+<body>
+  <div class="warp">
+    <div id="text">
+      <input id="text1" type="text" >
+      <input id="but1" type="button" value="create a li element">
+    </div> 
+      <ul id="uid">
+      </ul>
+  </div>
+  
+</body>
+</html>
